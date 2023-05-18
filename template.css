@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+:root {
+  --hitam: #111;
+  --putih: #ffffff;
+  --putih-transparan: #ffffff80;
+  --abu-abu: #333333;
+  --abu-abu-tua: #222222;
+  --hijau: #00ca99;
+  --hijau-tua: #147961;
+  --kuning: #cab600;
+  --kuning-tua: #7e741a;
+  --oranye: #f66d26;
+  --biruhijau: #347279;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: var(--hitam);
+  user-select: none;
+}
+
+header {
+  background-color: var(--hitam);
+  color: var(--putih);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.head {
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.status {
+  color: var(--putih-transparan);
+  text-transform: uppercase;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #292929;
+  height: 60px;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  color: var(--putih);
+  font-family: 'Inter', sans-serif;
+}
+
+.tab a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--putih);
+}
+
+.tabActive {
+  background-color: #2f2f2f;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Inter;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.container {
+  padding: 0px 30px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--abu-abu);
+  margin-bottom: 10px;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 10px;
+  background-color: var(--abu-abu);
+  text-transform: uppercase;
+}
+
+.chevron-icon {
+  width: 10px;
+  height: 20px;
+  margin-left: 5px;
+  margin-right: 10px;
+  background-image: url('./assets/chevron/chevron.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.show .chevron-icon {
+  transform: rotate(90deg);
+}
+
+.card-body {
+  display: none;
+  flex-direction: column;
+  color: var(--putih);
+  background-color: #222222;
+  padding: 10px;
+}
+
+.card-body.show {
+  display: flex;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Inter';
+  font-weight: 400;
+  padding: 5px 0;
+}
+
+.toggle-container {
+  position: relative;
+  width: 60px;
+  height: 20px;
+  border: 3px solid #c8c8c8;
+  border-radius: 15px;
+}
+
+.toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle-label:before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+input[type='checkbox'] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+input[type='checkbox']:checked + .toggle-label {
+  background-color: transparent;
+}
+
+input[type='checkbox']:checked + .toggle-label:before {
+  transform: translateX(40px);
+  background-color: #00ca99;
+}
+
+.parameter {
+  color: var(--putih-transparan);
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 20px;
+  text-align: left;
+}
+
+.deviceName {
+  display: flex;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+}
+
+.kincirName {
+  color: rgba(255, 255, 255, 1);
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.parameterStatus {
+  font-size: 14px;
+  text-align: right;
+}
+
+.parameterStatus.high {
+  color: var(--hijau);
+}
+
+.parameterStatus.mid {
+  color: var(--kuning);
+}
+
+.parameterStatus.low {
+  color: var(--oranye);
+}

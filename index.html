@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jentera App</title>
+    <link rel="stylesheet" href="./template.css" />
+    <link rel="stylesheet" href="./kondisi.css" />
+  </head>
+  <body>
+    <header>
+      <div class="head clock" id="clockElement"></div>
+      <div class="head status">Kondisi Tambak</div>
+      <div class="head battery">80%</div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="card">
+          <div class="card-header show">
+            <div class="deviceName">
+              <div class="chevron-icon"></div>
+              Tambak 1
+            </div>
+            <div class="cycleButton">
+              <button type="Stopped" class="cycleButton_btn">
+                Mulai Siklus
+              </button>
+            </div>
+          </div>
+          <div class="card-body show">
+            <div class="row">
+              <div class="kincirName">Kincir T101</div>
+              <div class="toggle-container">
+                <input type="checkbox" id="toggle-switch" />
+                <label for="toggle-switch" class="toggle-label"></label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="parameter">Kesehatan Kincir</div>
+              <div class="parameterStatus high">Baik</div>
+            </div>
+            <div class="row">
+              <div class="parameter">Koneksi Jaringan</div>
+              <div class="parameterStatus high">Baik</div>
+            </div>
+            <div class="row">
+              <div class="parameter">Daya Baterai</div>
+              <div class="parameterStatus high">Terisi Penuh</div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header show">
+            <div class="deviceName">
+              <div class="chevron-icon"></div>
+              Tambak 2
+            </div>
+            <div class="cycleButton started">
+              <button type="Started" class="cycleButton_btn">
+                Sudahi Siklus
+              </button>
+            </div>
+          </div>
+          <div class="card-body show">
+            <div class="row">
+              <div class="kincirName">Kincir T201</div>
+              <div class="toggle-container">
+                <input type="checkbox" id="toggle-switch-2" />
+                <label for="toggle-switch-2" class="toggle-label"></label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="parameter">Kesehatan Kincir</div>
+              <div class="parameterStatus mid">Cukup</div>
+            </div>
+            <div class="row">
+              <div class="parameter">Koneksi Jaringan</div>
+              <div class="parameterStatus low">Inkonsisten</div>
+            </div>
+            <div class="row">
+              <div class="parameter">Daya Baterai</div>
+              <div class="parameterStatus high">Terisi Penuh</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="tab tabActive" id="kondisi">
+        <div class="icon">
+          <a href="./index.html">
+            <div class="svg">
+              <img src="./assets/bottom-tab/kondisi.svg" alt="" />
+            </div>
+            Kondisi
+          </a>
+        </div>
+      </div>
+      <div class="tab" id="rincian">
+        <div class="icon">
+          <a href="./rincian.html">
+            <div class="svg">
+              <img src="./assets/bottom-tab/rincian.svg" alt="" />
+            </div>
+            Rincian
+          </a>
+        </div>
+      </div>
+      <div class="tab" id="sunting">
+        <div class="icon">
+          <a href="./sunting.html">
+            <div class="svg">
+              <img src="./assets/bottom-tab/sunting.svg" alt="" />
+            </div>
+            Sunting
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
