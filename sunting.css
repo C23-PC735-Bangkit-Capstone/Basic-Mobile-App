@@ -1,0 +1,23 @@
+.suntingoption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  color: var(--putih);
+  height: 60px;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: var(--biruhijau);
+  cursor: pointer;
+}
+
+.suntingoption:hover {
+  background-color: var(--biruhijau-tua);
+}
+
+.suntingoption:active {
+  transform: scale(0.99);
+  border: 0.5px solid rgba(17, 17, 17, 70%);
+  box-shadow: inset 1px 1px 1px rgb(17, 17, 17, 50%);
+}
